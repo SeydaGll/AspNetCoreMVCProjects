@@ -1,0 +1,19 @@
+﻿@model List<Product>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Product List Page</h1>
+        <ul>
+            @foreach (Product product in Model)
+            {
+
+                <li>
+            @*<a href="Product/Detail/@product.ProductId">@product.Name</a>*@
+                    <a asp-controller="product" asp-action="Detail" asp-route-id="@product.ProductId">@product.Name</a>
+                </li>
+
+            }
+        </ul>
+    </div>
+
+</div>

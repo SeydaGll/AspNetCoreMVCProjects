@@ -1,0 +1,10 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\bin\Debug\netcoreapp1.1\TagHelperEx.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\bin\Debug\netcoreapp1.1\TagHelperEx.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\bin\Debug\netcoreapp1.1\TagHelperEx.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\bin\Debug\netcoreapp1.1\TagHelperEx.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\bin\Debug\netcoreapp1.1\TagHelperEx.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\obj\Debug\netcoreapp1.1\TagHelperEx.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\obj\Debug\netcoreapp1.1\TagHelperEx.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\obj\Debug\netcoreapp1.1\TagHelperEx.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\obj\Debug\netcoreapp1.1\TagHelperEx.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\2108\TagHelperEx\TagHelperEx\obj\Debug\netcoreapp1.1\TagHelperEx.pdb

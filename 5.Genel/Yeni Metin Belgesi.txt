@@ -1,0 +1,27 @@
+
+action console ekraný powershall üzerinden çalýþýyor!
+
+database tarafýnda dbcontextoptions ayarý
+startup kýsmýnda middleware nasýl eklenmiþ
+
+baðýmlýlklar kýsmýnda
+sadece entityframework ü kullancaksan entityframework ü indiriyosun
+entityframework le birlikte sql server kullancaksan entityframeworkcore.sqlserver ý indriyosun
+sql server tasarýmý ile ilgili iþlemler için designý
+ve entityframwwork core la package manager console üzerinden update database vs gibi komutlarý yürütmek içinde tools ü 
+indiyosun
+.net core 2.0 ý ekliyosun..
+
+visualstudio nun extension ýyla toolbox a bootstrap gelir
+
+services.AddDbContext<ApplicationDbContext>(
+
+public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+
+action delegate dir..geriye deðer dönmeyen bir delege.void bir delegedir action. .netframework içerisinde hali hazýrda var 
+olan geriye deðer dönmeyen bir delege.. delegate sayesinde metodun içine baþka bir metodu parametre gecebiliyodum
+
+UI Kit internette ücretli olanýda var ücretsiz olanýda var.. bootstrap
+uyumlu olaný bulun. metronix meþhurdur
+http://elements.envato.com/graphic.. 
+http://ui8.net/

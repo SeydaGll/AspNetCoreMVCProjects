@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <p>Merhaba asp.net @@User </p>
+        <a href="mailto:bilgi@coder.com.tr">bilgi@coder.com.tr</a>
+        <p>@DateTime.IsLeapYear(2017)</p>
+        @*<p>@await Herhangibir()</p>*@
+
+        @Html.Raw("<span>Merhaba Dünya</span>")
+        @("<span>MerhabaDünya</span>")
+
+        @{ 
+            int sayi = 100;
+        }
+
+        @if (sayi%2==0)
+        {
+            <p>Sayi @sayi çifttir</p>
+        }
+    </div>
+    
+</div>

@@ -1,0 +1,10 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\bin\Debug\netcoreapp1.1\TodoWebApp.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\bin\Debug\netcoreapp1.1\TodoWebApp.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\bin\Debug\netcoreapp1.1\TodoWebApp.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\bin\Debug\netcoreapp1.1\TodoWebApp.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\bin\Debug\netcoreapp1.1\TodoWebApp.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\obj\Debug\netcoreapp1.1\TodoWebApp.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\obj\Debug\netcoreapp1.1\TodoWebApp.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\obj\Debug\netcoreapp1.1\TodoWebApp.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\obj\Debug\netcoreapp1.1\TodoWebApp.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\7.0809\TodoWebApp\TodoWebApp\obj\Debug\netcoreapp1.1\TodoWebApp.pdb

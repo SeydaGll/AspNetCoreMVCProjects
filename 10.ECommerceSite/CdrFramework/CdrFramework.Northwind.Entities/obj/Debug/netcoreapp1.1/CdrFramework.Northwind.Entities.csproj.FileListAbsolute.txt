@@ -1,0 +1,20 @@
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.deps.json
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.pdb
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.AssemblyInfo.cs
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.deps.json
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\bin\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.csprojResolveAssemblyReference.cache
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.csproj.CoreCompileInputs.cache
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.AssemblyInfo.cs
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Northwind.Entities\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.pdb

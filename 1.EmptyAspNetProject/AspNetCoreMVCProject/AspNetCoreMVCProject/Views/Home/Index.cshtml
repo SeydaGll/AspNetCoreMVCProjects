@@ -1,0 +1,21 @@
+﻿@model List<ProductViewModel>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Master";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        
+            @foreach (ProductViewModel item in Model)
+            {
+                <li>@item.Name - @item.Price - @item.Stock</li>
+            }
+        
+    </div>
+    
+</div>

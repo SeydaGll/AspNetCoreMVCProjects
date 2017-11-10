@@ -1,0 +1,147 @@
+filters
+mvc içerisindeki filtreler belirli bir evreden önce yada sonra sizin kod çalýþtýrmanýza izin veren bir yapý
+.net framework içerisinde built-in dediðimiz yani yapý içerisine dahil olarak gelen hazýr kullanýma sunulan filtreler var ve
+bunlar bazý görevleri yerine getirmek için kullnýlýyor
+ne gibi görevler ?
+-yetkilendirme iþlemleri: yetkisiz kullanýcýlarýn kaynaklara ulaþýmýný engellemek istiyosanýz bunu kullan
+-tüm isteklerin http üzerinden geldiðinden emin olmak istiyosun ve bir cevap dönmeden önce onu cashe e almak yada yeni bir
+istek geldiðinde cashe de var mý yok mu kontrol edip bunu istek hattýnda yani pipeline mýzda kýsa devre yaptýrarak çok daha hýzlý
+sonuçlar dönebilmek amaçlý kullanabiliyoruz
+-built-in olabildiði gibi kendi özel filtrelerimizide geliþtirebilirzi. nedem ben özel filtre geliþtiririm peki? 
+bunlar bana  ne zaman yetmezde ben kendime özel bir filtre uygulamak isterim?
+--uygulama içerisindeki çapraz kesiþimleri ele almak isteyebilirsiniz..kodunuzu sürekli bütün action lara yada controller lara
+kopyalamaktan yada ayný kodu tekrar yazmaktan kaçnmak istediðinizde bir filtre yazablirsiniz..
+--hatalarý yakalama ve bell bir sayfaya yönlendirme iþlemini tek tek tüm actionlara yazmak zorunda kalmazsýnýz bunu global
+olarak tek bir filtrede yazýp bütün uygulama yaþam döngüsünde yada uygulama çalýþma zamaný sýrasýnda çýkacak herhangi bir
+istisnai durumu rahatlýkla ele alabilirsiniz..
+
+filtrelerin çalýþma mantýðý?
+-filtreler mvc action invocation pipeline da çalýþýr. bütün filtrelerimiz filter pipeline içerisinde çalýþýr
+-genel olarak çalýþmasý filter pipline mvc action ý seçtikten SONRA Çalýþýyor yani mvc miz hangi actionýn çalýþtýrýlmasý 
+gerektiðini tespit ediyo ondan sonra bizim filtre çalýþýyor. ve filter pipeline içerisinde de farklý filtre tipleri var yada 
+bizim kendi özel ekleyeceðimiz filtrelerimiz söz konusu...
+
+nedir bunlar ?
+filtre tipleri
+authorization filter: bu ilk defa kullanýcýnýn geçerli istek için yetkili olup olmadýðýný belirlemek için kullanýlýyor ve ça
+lýþtýrýýyr yani bir http request geldi kullanýcý yetkili mi deðil mi bunu tespit edebilmek için ilk kullanýlýp çalýþtýrýlýyor
+
+resource filter : kimlik doðrulamasýndan hemen sonra çalýþan ilk filtre .. cashing iþlemleri için yada diðer performans
+gereksinimli iþlerimiz için yapmamýz gerekekn kýsa devre iþlemlerini uygulamak üzere oldukça güzel konumda bulunuyor.kýsa
+devre yaptýrmak için kullandýðýmýz bir yapý
+
+model binding nedir ? action larýmýz içerisine modeller alýyoruz. mesela product tipinden bir model alýyoruz ki
+kullanýcý örneðin admin panelinden yeni bir ürün eklemek istediði zaman bize actionýmýza formdan gelen veriler bu model
+ile geçiyor yada bir id alýyoruz, bu id  nereden geliyor? örneðin query string den yani adres satýrýnden bir ürünün detayý
+ný görmek üzere aldýðýmýz bir deðer gibi düþünebiliriz..gelen verilerin alýpta model üzerine bindirilmesi iþlemi
+model binding de gerçekleþtiriliyor
+
+action filter: model binding den geçtikten sonra action filter..action metodlarýmýz içerisindeki kodlardan hemen önce ve hemen
+sonrasýnda çaðýrýlýyor yani bir action calýþmadan hemen önce ve action çalýþtýktan hemen sonra  çalýþan kodlarý buralarda
+yazabiliyouz.. bir actiona geçen parametleri yada dönen sonuçlarý burada manipüle edebiliriz..model binding ten geçtikten hemen
+sonra action filter sa uðramýþbiz burada ele alýrsak eðer gelen parametreleri mmanipüle edebiliriz..ayrýca action filters
+action çalýþtýktan sonrada devreye girebiliyor
+
+exception filters: istisnai durumlarý bu filtrelerde ele alabiliyouz..istisna filtreleri yanýt gövdesinde yani response ýn 
+body kýsmýnda herhangi bir þey yazýlmadan önce ortaya çýkan yani sizin response nuz yada body si oluþmadan önce ortaya çýkan
+bizim ele alamadýðýmýz yada öncesinde düþünemediðimiz bazý hatalar olabilir.. bu hatalara genel ilkeler uygulamak istediðimiz
+zaman uyguluyoruz
+
+result filters: action sonuçlarýnýn gerçekleþtirilmesinden hemen önce yada sonrasýnda yani bir sonuç gerçekleþtikten sonra
+istediðimiz kodlarý çalýþtýrmanýzý saðlýyor.. yalnýzca action baþarýlý bir þekilde yürütülürse ortaya çýkýyor.. yani action
+executýon tarafýnda bir hata meydana gelirse zaten direk kýsa devre olacaðý için siz aþaðýya result filters a hiçbir zaman
+gelemeyeceðiniz anlamýna geliyor
+
+filtrelerimiz senkron ve asenkron olarak çalýþabiliyolar. performans açýsýndan fýrsatlar sunar bu.. bunu ýnterface in tipine
+göre belirliyoruz yani senkron mu olucak asenkron mu olucak ýnterface tipine göre belirlemiþ oluyrzu
+
+pipline da herhangi bir evreden önce yada sonra çalýþtýrabildiðimiz bu senkron filtrelere onstageExecuting ->bu çalýþtýrýlma
+dan hemen önce,, birde OnstageExecuted var
+bir action çalýþmadan önce ..> OnactionExecuting
+bir action çalýþtýktan sonra--> OnActionExecuted  bunlar action filterleri
+
+asenkron olduðu zamanda öncesi sonrasý gibi durumlarý ele almak yok.. bir tane metodu var bunun
+OnStageExecutionAsync
+eðer sen bunu bir action filtresi için yazýcaksan OnActionExecutionAsync olmuþ olucak.. bu metod filtrenin pipeline evresini
+yürütürken bir filterTypeExecutionDelegate temsilcisini alýyor içeriye ..  örneðin ActionExecutiondelegate action meotdu
+çaðýrýyor ve siz onu kodun içerisinde istediðiniz her yerde kullanabiliyosunuz
+
+IFilterFactory ne demk? IFilter interface ini uyguluyor.. böylece bir IfilterFactory örneði yani instance ý bizim filter
+pipeline ýmýzda herhangi bir yerde IFilter örneð gibi kullanýlabiliyor..ben IFilterFactory nin örneðini filter pipline 
+içerisinde sanki IFilter mýþ gibi kullanabiliyorum..framework filtreyi çaðýrmaya hazýrlanýrken  onu IFilterFactory ye cast
+etmeye çalýþýyor.yani elindeki IFilter ý IfilterFactory e cast etmeye çalýþýyor.. eðer bu cast iþleminde baþarýlý olursa
+createInstance metodu çaðýrýlýyor ve Ifilter örneði oluþturmak için gerekli iþlemler baþlatýlmýþ oluyor.
+bu yapý içerisinde esnek bir tasarým kazandýrýyor..çünkü artýk uygulama baþlarken filter pipeline ýna gidip hassas bir
+þekilde ayarlamama gerek kalmýyor.. bu yapý bize ne kazandýrdý? artýk ben burdan istediðim kadar ekleyip ekleyip
+dönebilirim:. IResultfilter Ifiltermetadata.. yani nihayetinde benim eklemiþ olduðum IfilterFatory de Iresultfilter da yada 
+kullanabileceðim diðer filter tipleride hep ayný yerden üretilmiþ.. rahatlýkla birbiri için instance larý kullanýlabilecek
+anlamýna geliyor bunlar..
+
+built-in filter attribute lerde durum ne ? bizim framework ümüz alt sýnýflarý yani kalýtým yapmýþ olan sýnýflarý ,biz bunlara
+drived sýnýf diyoruz, bu alt sýnýflarý üretip özelleþtirebileceðiniz  built-in attrýbute tabanlý bazý filtleri 
+içerisiyor..
+
+filtre arayüzlerimizin birçoðu yine þimdiki yaptýðýmýz gibi özel implementasyonlar için base sýnýflarý kullanabilmemizi
+saðlamýþlar yani bu attribute lerden vermiþler bize.. ResultFilterAttribute gibi.. baþka neler var?
+/*ActionFilterAttriute
+     ExceptionFilterAttribute
+     FormatFilterAttribute
+     ServiceFilterAttribute
+     TypeFilterAttribute
+     */  
+bunlarý asp.net dökümanlarýndan da görebilirsinz...
+
+filtreler hangi sýrayla çalýþýr?
+nasýl çalýþýyolar? sýralamasý var mý yok mu?
+bir standart scop a eklenme durumu ve bunlarýn çalýþtýrýlma sýrasý var
+bir filtre pipline a 3 farklý kapsamdan biriyle eklenebiliyor
+
+1.controllara filtrenizi uygulayablirsiniz. bu controller içersindeki bütün action larýmda geçerli olucaktýr..addheader a
+gidip baktýðým zaman bir resultfilter var bütün action resultlarda çalýþýcak..
+2.direk actioný eklemek yani action üzerine implement edebilirdik..
+3.yada filtrelerinizi uygulama genelindeki bütün kontroller lar ve action lar için global olarak startup sýnýfý içerisine
+configureservices metodu içerisine ekleyebilirsiniz..
+
+varsayýlan çalýþtýrma sýralamasý
+global uygulanan before filtre kodlarý çalýþýr :OnStageExecuting yani
+    controller lara uygulanan before filtre kodlarý 
+             action lara uygulanan before filtre kodlarý
+	     action lara uygulanan after fltre kodlarý
+    controller lara uygulanan after filtre kodlarý
+global uygulanan aafter filtre kodlarý
+
+-senkron action filtresi için sýralama
+ilk önce benim startup ýma uyguladýðým filtrenin before kodu
+sonra benim controller ýma uyguladýðým filtremin before kodu
+son olarak action ýma uyguladýðým filtremin before kodu çalýþcak
+
+sequence   filter scope          filter method
+1	    global		OnActionExecuting   before
+2	    controller          OnActionexecuting   before
+3	    method(action)      OnActionexecuting   before
+4	    method		OnActionexecuted    after
+5	    controller		OnActionexecuted    after
+6           global		OnActionexecuted    after
+
+istersek biz bu sýralamayý deðiþtirebiliriz . nasýl?override yöntemiyle
+
+varsayýlan çalýþtýrýlma sýralamasýný IOrderFilter ýn uygulanmasý ile override edebiliyoruz..yani geliþtirmiþ olduðumuz
+attrýbute lerde IOrderFilter dan implement ederseniz bu interface ide sýralamasý için bir tane Order propertysi saðlýyor
+bu propery kapsamdaki yürütme sýralmasýný belirtmek için kullanabiliyosnuz..dikkat edilmesi gereken þey su:
+daha düþük order deðerine sahip filtrelerin before kodlarý yüksek order deðerine sahip olan filtrelerin before kodundan
+önce çalýþýr..daha düþük order deðerine sahip filtrelerin after kodlarý yüksek order deðerine sahip olan filtrelerin after
+kodundan sonra çalýþýr..
+
+ayný action filtresine sahipsek ve controller ve global filtrelerinde order özelliklerini sýrasýyla 1 veya 2 olarak ayarlarsam
+yürütme sýrasýný tam olarak tersine çevirmiþ oluyorum aslýnda..
+
+Sequence   FilterScope   OrderPropery  FilterMethod
+1	   method            0        OnActionExecuting    before
+2	   controller        1        OnActionExecuting    before
+3          global            2        OnActionExecuting    before
+4          global            2        OnActionExecuted     after
+5          controller        1        OnActionExecuted     after
+6          method            0        OnActionExecuted     after
+
+kýsa devre yaptýrmak?
+geri dönerken sonucu cash e alabilirim.. 

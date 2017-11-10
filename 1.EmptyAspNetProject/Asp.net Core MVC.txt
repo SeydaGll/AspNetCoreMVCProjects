@@ -1,0 +1,87 @@
+boþ bir asp.net core projesi baþlatýp ardýndan bunu asp.net core mvc projesi haline getiricez.
+ASP.NET Core web application(.NET Core) açýyoruz.. bunu .net core üzerinde geliþtiriyoruz
+ASP.NET Web application(.net framework)  eski bildiðimiz mvc5 projeleriyle devam edebiliriz
+ASP.NET COre web asp(.net frame) ile baþlarsak yine .net core geliþtiririz ama .net framework üzerinde burda geliþtirdiðin 
+uygulama sadece microsoft windows server larda publish edilir.. 
+cross platform da da yayýnlamak istediðim için .net core olanýný tercih ediyoruz.
+
+empty bi proje baþlatýk. asp.net core versiyonum 1.1..en son sürümü olan 1.1 üzerinde geliþtiricez. içerisinde sadece 2 tane 
+cs dosyam, 1 tane wwwroot klasörüm var, proje özelliklerinin bulunduðu  launchsetting.json, launch(baþlatmak),
+baðýmlýlýklarýmý gösteren nuget ve sdk, sdk de .net core bulunmakta,connected services yani bir application insight(kavrama) 
+gibi azure servisine baðlanmak isterseniz burdanda add connected service diyerek baðlantýný yapabilrsin.. 
+
+program.cs , .net projelerimizde olan program.cs asp.net core içerisindeki projelerde de yer alýyr..
+çünkü artýk entry point imiz var.(giriþ noktasý) bununla main metodu tetikleniyor.. 
+ve içerisinde biz kendi web uygulamamýzýn hostunu kuruyoruz. bunu kurduktan sonra da çalýþtýrýyoruz.. host.run();
+
+.UseApplicationInsights(): vs 2017 ile gelen template lerin içerisinde application insights ( microsoftun cloud çözümü) , 
+uygulamanýz üzerinde hatalarý canlý takip edebilmenizi saðlayan bir servis.. bu sevrisi hali hazýrda hostunuzun içerisine
+entegre ediyor .. biz bunu kullanmak istemediðimiz için burdan kaldýrýyoruz..pipline ýmaza hiç girmesine gerek yok.. ama 
+burdan kaldýrmk yetmiyor.. dependience de nuget pachage lerýmda da miscoroft.applicationinsight bulunmakta .. bunuda 
+kaldýrýcam..nereden kaldýrabilirim? 
+1. alýþýk olduðunuz projenize sað týklayýp manage nuget menüsünden týklayýp unisntall
+2. cs.proj dosyasý üzerinde .net core 1.1 ile beraber 
+
+.net core 1.1 projelerinde en önemli deðiþiklik nuget lerin baðýmlýlýklarýmýzýn yönetildiði yer olarak geldi..
+.net core 1.0 versiyonunda profect.json da yönetebiliyodk
+.net 1.1 cs.proj ile.!!  sað klik manage nuget pachage ve sað klik edit blogsiteapp .. 
+
+static dosyalar içinde nugetler ekliyoruz
+
+properties nedir? environment variables
+
+host u program.cs ayaða kaldýrýr.. 
+program.cs de metod çaðrýsý  .UseStartup<Startup>(), uygulama baþladýðý an ile ayaða kalkýcak olan sýnýfý iþaretliyor
+
+web uygulamalarý response ve request nesneleri ile alýþýr.istek nereye gider? bu istek cevaplanýrken hangi safhalardan geçer
+gibi bütün iþlemlerin yönetildiði pipline dediðim bir yapým var..tünel gibi düþün.
+
+gecikme, sitelerin cevap süresi, ram ve cpu da fazla kullaným alaný sýkýntýsý..geliþtirme sýrasýnda neler tercih edeceðimizi startup ta beliriyoruz
+
+configure() metodu? bu uygulama içerisinde asp.net mvc kullanýcaksam burada belirtiyorum, static dosyalar kullanýcaksam css, javascrip,. html uzantýlý dosyalar gibi yine burada belirliyorum. 
+
+kendi  servisleri konfigure etmek istiyorsam mesela ben entityframewrok ile çalýþmak istiyorum bunu bir middleware yani ara katman olarak projeye eklemek istiyosam confýgureservices metodu içerisinde belirleyebilirmm. 
+configure olmazsa olmaz metoddur startup ta.. configureservices olmasa da olur. 
+
+configure (.... ) interface lerden parametlereler alýnmýþ.
+host umuz ilk defa bu startup sýnýfýný çalýþtýrýp içindeki configure metodunu tetiklerken biz bu parametleri beklediðimiz için ilgili sýnýflardan türetip parametreleri bize gönderiyor. 
+
+IApplicationBuilder ? benim uygulamamýn request pipeline ýný konfigüre etmem iiçin kullanýlýyo.eðer ben pipeline mýn içerisine birþeyler eklmek istiyorsam mesela benim uygulamam static dosyalarý kullanýcak. 
+app.UsestaticFiles(); gibi bir metod ekliyorum. bu sayede uygulamam içerisinde static dosyalarý kullanabiliyorum.. bu metodu da burada kullanabilmem için öncelikle gdip microsoft un static dosyalarý kullanmam için yazmýþ olduðu
+paket de yüklemem lazým.
+
+nuget altýnda þuanda microsoftaspnetcore var bomboþ. tek yapabileceðiniz size gelen bütün isteklere bir mesaj döndürmek .. bunuda þu þekilde yapmýþ
+app.Run uygulamayý çalýþtýr. çalýþtýðý zaman asenkron(eþ zamanlý) olarak gelen context in içerisinden response dön gelen bütün isteklere, cevaba da hello world yaz demiþ.
+
+writeasync metodu burada bizim responce nesnemiz içerisinde bulunan bir metod. response.writeasync("..").. bana bir istek geliyor ve bu isteði yanýtlamak bir cevap nesnesi oluþturuluyor. bu cevabýn içerisine bunu yaz demiþ olduk 
+
+cevap sadece hello world var, arkadaki html kodlarýný biz göndermedik. crome bunu ekrana gösterebilmek için diðer etiketleri kendisi etiketliyor. yani bizim web sitemzin göndermiþ olduðu bir cevap deðil.
+biz sadece hello world u döndük.
+
+iþin aslý,  sizin burda geliþtirdiðiniz bütün herþey, gerek html içerikli olsun, gerek razor syntax ýný kullanýyor olun, gerekse c# kodlarý yazýyor olun bunlarýn tamamý sunucu tarafýnda çalýþan kodlardýr. 
+istemci tarafýna gitmeden önce bir render iþleminden geçer . client side diye kodladýðýmýz yapýlarda illaki bir render iþlemine tabi tutulduktan sonra istemciye gönderiliyor. burdaki kodlarýn tamamý server üzerinde iþlenmek 
+üzere tasarlanmýþ  kodlardýr. server ýn iþlediði kodlar istemciye gider. BUNU UNUTMA. MVC TARAFINDA
+
+!!uygulama çalýþsýn. çalýþtýðýnda gelen isteðe oluþturaln cevabýn içine hello world yazýlsýn
+
+HTML SAYFASI TASARLAMA..
+benim siteme /index.html diye bir ifadeyle gelen herkes bu html sayfasýný görsün. 
+
+***static içerikler wwwroot altýnda oluþturulur. add new item web tarafýnda html dosyasý ( html page) seçilir  adý index olsun...bu sayfayý hazýrlayýpta uygulamayý çalýþtýrmam demek bu sayfanýn görüntüleneceði anlamýna gelmyior.
+benim pipeline ýmda gelen isteklerin static dosyalarý iþleyebilecek þekilde yapýlandýrýlmýþ birþey yok. istasyon koymadým. bunu yapmak için öncelikle uygulamaya demeliylim ki sen static dosyalarýda çalýþtýr.. 
+static dosya .html, .css, .jpag gibi farklý dosya türleri.. içeriði hiç bir zaman deðiþtirilmeyen ,sabit kalan duraðan dosyalar. bunu eklemek için manage nuget pachage. Microsoft.aspnetcore.staticfiles...
+yada projeye sað týklayýp edit deyip elle yazýp kaydedebilirsinizde. bunu buraya koymuþ olmam demek benim uygulamam içerisindeeki static dosyalarý görebileceðim anlamýna gelmiyordu. referansý aldýn ama referansý kullanmadým.
+yani bir console uygualamsýnda system.link i uygulamanýza eklemeniz ama o dll in içerisindeki herhangi bir kodu kullanmamanz gibi bir durum oldu. 
+yapýlacak iþlem Configure metoduun içerisinde uygulamnýza static files ý kullanmasýný söylemeniz. 
+app.UseStaticFiles(); artýk static dosyalarý kullanabilirim. biz varsayýlan olarak wwwroot altýndaki dosyalarý çalýþtýrsýn istiyoruz.  locahost/index.html.  
+ 
+artýk css dosyasý ekleyip oradaki yazýyý biçimlendiredebilirm . FAKAT BUNU YAPABÝLMEK ÝÇÝN
+1. BENÝM PROJEMÝN ( SADECE STATÝC DOSYALAR OLARAK DÜÞÜNME. ENTÝTY FRAMEWORK CORE OLABÝLÝR, FARKLI BÝRÇOK BAÐIMLILIÐINIZ OLABÝLÝR, ) ÝHTÝYACINI ÖNCELÝKLE NUGET  PACHAGE DEN BULUP ÝNDÝRÝYORUM..BUNU YAPTIKTAN SONRA
+2. EÐER KULLANMAK ÝSTÝYOSAM CONFIGURE METODU ÝÇERÝSÝNDE TANIMLIYORUM.. BÖYLELÝKLE MÝDDLEWARE IMA EKLENMÝÞ OLUYOR
+CSS EKLEMEK ÝÇÝN WWWROOT SAÐ KLÝK NEW ITEM CSS STYLE SHEET SEÇTÝK BÝR ÝSÝM VERÝP CSS DOSYASINI EKLEDÝM. 
+
+UNUTMA CSS DOSYASINI HTML DOSYASININ HEAD KISMILARI ARASINA LÝNKÝNÝ BAÐLAYARAK KULLANIYOSUN. JQUERY, JAVASCRÝP ÝÇÝNDE GEÇERLÝ. 
+
+normalde html de index.html i çalýþtýrýrdýk. burda startup çalýþtýrýLýyor. çünkü host umuz üzerinde bunlarýn hiçbir ayarý yok. kestrel þuanda hangi dosyayla baþlayacaðýný bilmiyor. öyleki biz bunlarý STARTUP.CS den YÖNETÝYORUZ.
+CONFÝGURASYON YAPARKEN GÝT STATÝC DOSYALARI KULLAN
+

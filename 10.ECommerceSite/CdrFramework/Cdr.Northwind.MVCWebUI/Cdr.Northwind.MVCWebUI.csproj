@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CdrFramework.Core\CdrFramework.Core.csproj" />
+    <ProjectReference Include="..\CdrFramework.Northwind.Business\CdrFramework.Northwind.Business.csproj" />
+    <ProjectReference Include="..\CdrFramework.Northwind.Entities\CdrFramework.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

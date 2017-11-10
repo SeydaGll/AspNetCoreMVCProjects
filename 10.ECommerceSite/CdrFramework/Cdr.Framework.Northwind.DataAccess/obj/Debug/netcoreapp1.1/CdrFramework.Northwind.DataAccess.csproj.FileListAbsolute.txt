@@ -1,0 +1,24 @@
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.deps.json
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.AssemblyInfo.cs
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.pdb
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.pdb
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.deps.json
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\bin\Debug\netcoreapp1.1\CdrFramework.Northwind.Entities.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.csprojResolveAssemblyReference.cache
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.csproj.CoreCompileInputs.cache
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.AssemblyInfo.cs
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\Cdr.Framework.Northwind.DataAccess\obj\Debug\netcoreapp1.1\CdrFramework.Northwind.DataAccess.pdb

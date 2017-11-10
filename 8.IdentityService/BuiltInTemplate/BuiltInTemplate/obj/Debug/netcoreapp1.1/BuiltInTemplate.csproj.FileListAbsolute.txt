@@ -1,0 +1,11 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\bin\Debug\netcoreapp1.1\BuiltInTemplate.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\bin\Debug\netcoreapp1.1\BuiltInTemplate.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\bin\Debug\netcoreapp1.1\BuiltInTemplate.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\bin\Debug\netcoreapp1.1\BuiltInTemplate.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\bin\Debug\netcoreapp1.1\BuiltInTemplate.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\obj\Debug\netcoreapp1.1\BuiltInTemplate.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\obj\Debug\netcoreapp1.1\BuiltInTemplate.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\obj\Debug\netcoreapp1.1\BuiltInTemplate.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\obj\Debug\netcoreapp1.1\BuiltInTemplate.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\BuiltInTemplate\BuiltInTemplate\obj\Debug\netcoreapp1.1\BuiltInTemplate.pdb

@@ -1,0 +1,6 @@
+GOOGLE MVC SECTÝON KULLANIMI YAZ
+
+AYNI ZAMANDA docs.asp.net
+
+http://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/
+

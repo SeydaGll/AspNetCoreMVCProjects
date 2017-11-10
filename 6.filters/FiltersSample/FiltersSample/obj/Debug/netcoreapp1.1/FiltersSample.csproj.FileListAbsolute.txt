@@ -1,0 +1,10 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\bin\Debug\netcoreapp1.1\FiltersSample.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\bin\Debug\netcoreapp1.1\FiltersSample.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\bin\Debug\netcoreapp1.1\FiltersSample.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\bin\Debug\netcoreapp1.1\FiltersSample.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\bin\Debug\netcoreapp1.1\FiltersSample.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\obj\Debug\netcoreapp1.1\FiltersSample.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\obj\Debug\netcoreapp1.1\FiltersSample.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\obj\Debug\netcoreapp1.1\FiltersSample.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\obj\Debug\netcoreapp1.1\FiltersSample.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0609filters\FiltersSample\FiltersSample\obj\Debug\netcoreapp1.1\FiltersSample.pdb

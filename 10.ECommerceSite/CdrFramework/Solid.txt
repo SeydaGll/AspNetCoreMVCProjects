@@ -1,0 +1,156 @@
+S O L I D Prensipleri : geliþtirme yaklaþýmý
+
+S ingle Responsibility Princible : tek sorumluluk prensibi. her classýn her metodun sadece tek bir yaptýðý iþ vardýr. tek bir þeyden sorumludur.. ben bir metodu deðiþtiriceksem tek br iþ 
+için deðiþtirmiþ olurum.. çünkü o metod sadece tek bir iþle meþgul ,örneðin sýralama metodu.. geniþleyebilecek , tekrar kullanýlabilir bir yapý yada test edilebilir bir yapý için tek sorumlu
+luk ilkesini dikkate almamýz gerekiyor
+
+O pen/closed Prinsible : açýk kapalý prensibi..class metod gibi lerin geliþtirmeye açýk, kodlarýn ise deðiþime kaapalý ilkesi.. mesela loglama alt yapýsý oluþturduðunu düþün .veri tabanýna 
+ve xml e kayýt tutyosunuz sonradan text dosyasýna yada windows event loglarada log tutma ihtiyacý hissettin.. sadece event loglara kayýt tutan kodlarý yazmýþ olmamýz bizim uygulamaýzýn
+geniþlemesi için yeterli olmak zorunda..kodun içinde baþka hiçbir deðiþiklik yapmadan yazmýþ olduðum yeni sýnýfýmýn sisteme entegre olup çalýþabilmesini saðlamalýyým. 
+
+L iskov's substitution : yerine geçme prensibi..alt sýnýflardan oluþturulan nesnelerin üst sýnýflarýn nesneleriyle yer deðiþtirdiklerinde ayný davranýþý göstermek zorunda olduklarýný 
+söylüyo. yani türetilen sýnýflar türeyen sýnýflarýn tüm özellerini kullanmak zorundadýr.. eðer kullanmaz ise ortaya iþlevsiz yani dummy aptal kodlar çýkacaktýr.. bu yüzden üst sýnfa 
+if else gibi kurallar yazarak tip kontrolü yapmak gerekirki buda açýk/kapalý prensibe tamamen ters düþer 
+
+I nterface Segregation Princible : arayüz  ayrým prensibi.. bir ýnterface gerektiðinden fazla yetenek eklemememiz gerektiðini söylüyor.. bir arayüzde ihtiyac olan neyse sadece onlarý
+eklemen gerekir diyo
+
+D ependency Inversion Princible : baðýmlýlýðýn ters çevrilmesi ilkesine göre üst seviye sýnýflar , modüller, metodlar gibi alt seviyeli sýnýflara baðýmlý olmamasý gerekir diyor ve alt 
+sýnýflarda yapýlan deðiþiklikler üst sýnýflarý etkilememelidir diyo
+
+
+core katmaný:  projemýn diðer tüm katmanýlarýnýn ortak olarak kullanmýþ olduðu nesnelerin barýndýrýldýðý katmaným. diðer bütün katmanlar bu core katmanýmý referans olarak alýcaktýr
+business katmaný : iþ kurallarý geliþtirilcek
+dataaccess katmaný: data yada dal da diyebilirsin.. veri eriþim katmaný
+entities katmaný: ortak varlýklarýn kullanýldýðý katman. app layer dediðimiz uygulama katmanýný inþa ediyoruz..uygulamýmýz için gerekli olan varlýklarý oluþturcaz. category,product,customer
+mvc web uý katmaný: web user ýnterface katmaný : görselkatman
+
+Category sýnýfýný yalýn halde býrakmamalýyým. Ientity den kalýtým yapmak zorundayým çünkü ilerde sorun çýkartýr yalýn halde burakýrsan.. belli kurallar koymak isticeksinz,seçme iþlemleri
+filtreleme iþlemleri yapmak isticeksiniz varklýklarýnýzda, diceksiniz ki bu metodu sadece þu ýnterface den türeyenler kullansýn yada bu metodu sadece new ile türetilebilne , þu sýnýftan
+kalýtým yapmýþ olanlar kullansýn gibi durumlara girdiðiniz zaman eðer sizin category sýnýfýnýzda herhangi bir kalýtým yada interface ýn uygulanma durumu yoksa o anda sorun yaþanýyor.
+bu sorunu yaþamamak için IEntity kalýtýmý yaparýz.. IEntity i core katmanýma yazarým çünkü herkesin ulaþabileceði bir yerde olsun bunu istiyoruz.. entiy lerim ayrý yerde ama entity
+lerime sözleþme niteliðinde olan entity özelliðini taþýdýðýýný belirten interface ým core katmanýnda.. 
+
+Validationlar , entity framework tarafýndaki code first yaklaþýmlarýný ben nereye yazýcam..ProductId nin üzerine gelip ben [Required] diyip attrýbute mý yazabilirim..solýd prensiplerine 
+aykýrý aslýnda çünkü bu product sýnýfý siz onu yazdýðýnýz zaman sadece product ý tanýmlamak üzere kullanýlmýþ olmuyor..ayrýca onun üzerine bir takým meta data veriside girmiþ
+oluyosunuz yada validasyon kurallarýda yazmýþ oluyosunuz.. her ne kadar bir tane attrýbute gibi görünse de o attrýbute sizin sýnýfýnýza ilave bir takým metodlar vs ekliyor. peki ben
+bunu nasýl yaparým? sizin bu Product alaný gereklidir gibi kurrallarýnýzý business katmanýnda örneðin validation isminde bir klasör açýp entity lerinizin validatýon iþlemlerini orada 
+fluent API ile yapabilirsiniz yada 3. parti bazý araçlar vardýr bu validasyon iþlmleri için bunlarý kullanabilirsiniz.. doðru yöntemi budur.. database tarafýndaki validasyon böyle. peki 
+görsel katmandaki validasyon ? onu da view modelleriniz üzerinde inþa edersiniz..gelipte burda entity üzerinde inþa etmek pek anlamlý deðil.. çünkü istemci tarafýndaki validasyonlar ile
+database tarafýndaki validasyonlar birbirini tam olarak tutmuyor olabliir.. böyle durumlarda istemci tarafýna farklý validasyon database tarafýna farklý validasyon kurallarý uygulýcaksýn.. 
+bu ikisini kesinlikle birbiinden ayýrýn.. bu tür iþlemler için zaten gidip özel view modeller yazýyoruz..bunun için entityframework tutoriala bak!! 
+
+dataaccess katmanýný geliþtiricez .farklý bir takým ihtiyaclarým var.. sýra dataaccess de ama ben dataaccessi geliþtirirken bir takým ortak nesnelere de ihtiyaç duyarým.. mesela bir r
+repository yazmak zorundayým.. peki bir repository i repository yapan nedir.. iþte bunun kurallarýný bir interface ile söylüyorum ve bu genel bir yapý olduðuna göre o interface i core
+tarafýnda yazmam lazým. diðer yandan entityframework için yapacaðým bir tane repositorybase sýnýfým olmalý.. eðer bunu yapmazsam ben categry için product için yada tüm varlýklar için
+ayrý ayrý repository sýnýflarýný her zaman kodlamal zorunda kalýrým .. select ýnsert update delete gibi iþlemleri yapan temel 4 iþlemi yapan bir tane ortak sýnýfým olsun.. benim product 
+için category için oluþturcaðým repository sýnýflarý ordan kalýtým yapsýn böylelikle ben sürekli gidip tüm sýnýflarýma kod yazmak zorunda kalmýyým
+
+dataaccess tarafýný kodlýcaz ama þöyle þeyler çýkabilir karþýmýza.. bugün entityfrmaework kullanýyorum  ama yarýn nhibernet yada linqtosql i kullanabilirim. proje günü 
+gereksinimine göre deðiþebilir.. böyle bir durumda benimde buna hazýrlýklý olmam lazým.. yani öyle bir yapý kurmalýyým ki yine birbirinden
+baðýmsýz olarak yine solýd prensiplerine uygun olarak rahat bir þekilde dataaccess i deðiþtirip projeninde bundan etkilenmemesiini saðlamalýyým..
+
+IEntityRepository--> opratörlerim ýnsert update delete.. bu bir reposity sözleþmesi ama bütün sýnýflarýmlada çalýþmalý,product category yada baþka hangi varlýðým varsa bunlarla çalýþa
+bilmeli..veritabaný nesnesi olmayan herhangi bir sýnýfla çalýþamamalý.. bunun gibi kurallarýda uygulamalýyým.. generic bir yapý yapmalýyým çünkü birden fazla sýnýfla çalýþcak.. T için
+belli kýsýtlama yazmalýyým where ile..T:class yani referans bir tip olmalý.. genel olarak referans tiplerimiz class cinsinden oluþturulur.. class dediðimiz zaman illaki bu bir class týr 
+demiþ olmazsýnýz..class yazarak T referans bir tip demiþsinizdir.. Bütün referans tipleri geçebilir þuanda o yüzden ben sadece veritaabný nesneleri geçsin istediðim için IEntity diyorum.. 
+IEntity sadece veritabný nesnelerim için yazdýðým bir interface idi..imdi bu T ye benim IEntity isimli ýnterface imde olabilir. yani T nin yerine onuda gönderebilirler onu gönderemesinler
+diye new() dyrum.. ýnstance olucak illaki demek.. örneklenebilir bir nesne olucak diyorum.. new diyince abstract bir sýnýf geçieremezsin. new demeseydim IEntity interface ide gönderebilirdn
+interface lerden örnek türetemesin çünkü
+Expression<Func<T,bool>>  T nesnesiyle çalýþ geriye bool bir ifade dön
+Expression<Func<T,bool>> filter=null buraya hiç bir ifade göndermeden de kullanmak isteyebilir benim kullanýcým. eðer hiç bir ifade gönderilmezse filter ýn deðeri null olsun ona göre alýþ
+
+baserepository yazýcaz.. neden ? bütün diðer varklýklar için product,category,customer,card için ayrý ayrý IentityRepositoy igövdesini yazmayým. þu ürünümün kategorisi ne? yada þu kategorýnýn
+altýndaki  ürünleri getir sadece bir takým özel operasyonlar yazýcaksam yada quantity deðeri 10 nun altýnda olan product larý getir gibi birþeyler yazýcaksam o zaman özel bir metod daha
+ekleyebilirim repository e.. bunun haricinde burda görmüþ olduðunu 5 operasyon hepsinde ortak olmasý gereken þeyler.. her seferinde bunlarý yazmamak için bir tane base sýnýf yaparým
+..diðer yazýcak olduðum nesneye özel olanlar bunu kalýtým yoluyla alýrlar benm için daha raht bir çalýþma imkaný olur
+
+EFEntityRepositoryBase entityfrmaework tarafýnda kullandýðým entityrepository lerimin base sýnýfný yazýcaz. bunun dbcontext ten çoðalmýþ olma zorunluluðu koycam.. bunun için projeme
+core üzerine microsoft.entityframework.core eklicem. artýk entityframe work ü kullanabilcem. <TEntity,Tcontext> bu sýnýf hangi entity için çalýþýcak ve hangi datacontext için çalýþacak
+birden fazla datacontext oluþturabilirm.. TContext bir Dbcontext sýnýfý olmak zorunda yoksa TContext in bir entityframework data context nesnesi olduðunu anlayamam
+
+DBCONTEXT sýnýflarý disposible yani hafýzadan silinebilen nesnelerden..usin dedikten sonra içerisinde yazýyorum . ben usin bloðundan çýktýðým anda context nesnesi hafýzadan yok edilecek
+bunu constr içerisinde de oluþturabilirsiniz
+
+public async Task<TEntity> Get(Expression<Func<TEntity, bool>> filter = null)
+        {
+            using (var context=new TContext())
+            {
+                return await context.Set<TEntity>().SingleOrDefaultAsync(filter);  // gelen filtreye göre bir tane varlýk bulucak ve geriye dönücek
+            }
+        }
+asenkron olduðu için TASK TÝPÝNDEN DÖNMELÝYÝM. async olana await olarak dönmem lazým
+
+ÖZET: biz bir enetityframework tarafýda geliþtireceðimiz repository ler için base sýnýýfý oluþturuypruz.. böylece gidip hem product ta hem category de hem card nesnesinde vs tek tek 
+burada yazacðým metodlaýn içerisini doldurmak zorunda kalmýcam.. product için bir repository yazarsam  eðer gelip product repository nýn buradan kalýtým yapmasýný saðlýcam..TEntity
+diyerek her neseyle çalýþabilsin ama her nesne derken bazý kurallarým var... veritabaný nesnesi olduðunu garantiliyorum burada..ve farklý datacontext lerle çalýþýlabilir o yüzden TContext
+diyerek bunun bir DbContext olduðunu ve türetilebilir olduðunu orunlu koþtuk..bunun Repository olduðunu garantilemek içinde IEntityRepository implement ettim. 
+
+searc iþlemleri için neyi search etmek istiyosan onun repository sini kullanarak iþlevselliði yerine getireceksin.. ayrýca search iþlemi yazmana gerek yok biz burda
+search iþlemi sonunda sen  liste alýrsýn genel olarak..GetList metodu senin search iþlemleri için kullanabileceðin bir metod.. mesela ürünün adýysa ne diceksin.. q=>q.Name=="saat" gibi
+
+getlist metodu çalýþtýrýlýrken varlýktaki bütün ürünler istenebilir mesela bütün kategorileri getir bütün ürünleri getir diyebileceðin gibi, örneðin sadece stock deðeri 0 olmayan
+larý , yani bir filtre gönderebilirsn
+
+async, asenkron programlamanýn bir durumu. bu programlada iþlemci eþ zamanlý olarak iþlmlerinizi yürütebilir. yani siz get operasyonu çalýþýrken ayný zamanda birde Add operasyonu yönetebilir
+sinz.. yada baskaca iþler varsa get ten veri dönünceye kadar beklemez bir kanal burda çalýþýrken baþka br kanaldan da iþlemler devam eder.. buradaki iþ bittiði zaman kanal kapatýlýp 
+diðer kanal üzerinden birleþtirilip tüm akýþ devam edicektir.. iþ seri gider. bir tane formunuz var bu formun üzerinden ürün ekliceksiniz.. bu ürünü eklerken naparsýnýz.. ürünün adýný
+alýrsýnýz fiyatýný alýrsýnýz resmini alýrsýnýz resmi upload edip dosya sistemine yazarken bir yandan diper verileri de veritabanýna yazarsýnýz. bu iþlerin hepsini hepsi async yaparsanýz
+dosya upload edildikten sonra götürüpte bir klasörün içerisine onun yazýlmasý, ayný zamanda da es zamanla olarakta ürünle ilgili verilerin vertabanýna yazýlmasý..
+asenkron programlma yaparkende c# 6.0 ýn bir takým yenilikleri var..
+ilki : bir metod asenkron olucaksa async kelimesiyle bildirmen gerekiyor ve asenkron bir metod geriye direk bir nesneyi dönmez dio. Geriye Task döner  diyo
+Task görev anlamýna geliyor yani metodun yapacaðý iþ , iþi döndüm geriye diyorum aslýnda..
+ikinci: içerideki asenkron operasyon neyse onuda await diye bildiyorum.  singleordefaultasync diye bir metod . bu singleordefault veritabanýndaki nesneyi bulup ilk bulduðunu geriye dönüyodu
+bulamazda default deðerini dönüyodu.. bunu asenkron olarak gerçekleþtir.. iþte bu iþlem bitinceye kadar kanalý bekletmek için await diyorum
+söz dizimi bu þekilde..
+
+þimdi dataaccess katmanýmýzý yazabiliriz. abstract ve concrete dosyalarý oluþturuyoruz.. 
+abstract içerisinde dataaccess katmanýný kullanacak olan katmanlarýn dataaccess le haberleþeceði nesneleri yani ýnterfacelerimi koyucam
+concrete katmanýnda ise somut nesnelerim olucak..eðer entityframework ile çalýþyýosam bunun içerisine datacontext imi koyuyorum..data sonra entityframework tarafýndaki category nin 
+dataaccess layer ýný buraya koyuyorum gibi. 
+
+datacontexi yazdým. bundan sonra benim entityframework tarafýndaki dataaccess layer larýda inþa etmem gerekior. repository sýnýflarý mýda yazmam lazým.. repository sýnýfný yazmdan önce
+mesela kimin için yazýcam. Category için .. o zaman Category repository si içinde br ýnterface tanýmlýcam.. çünkü benim dataaccess layer ýmla konuþcak olan business layer direk dataaccess de
+ki repository sýnýfýmý deðil ýnetrface mi bilicek.. böylelikle ben sýnýfýmý sonrasýnda istedðim gibi deðiþtirebilcem.. ICategoryDal a neden ihtiyacým var.. burdan da ýmplement ini yapayým ki
+business layer dataaccess layer ile çalýþýrken sadece ICategoryDal ý bilsin solýd prensipleri gereði bunu yapmam gerekiyodu
+
+entities katmaný.. uygulamanýn varlýklarýnýn bulunduðu katman
+core katmanýn amacý ne? benim dataccess katmaným veritabanýna baðlancak. ama veritabanýna baðlanýrken gerekli bir takým sözleþmeleri vs varsa bunlarýn tamamýný ortak olan ne varsa
+mesela dataaccess burda entitykatmanýnýda kullanýyo. bir entity nin entity olduðunu nerden anlýcak.. iþte burda core katmanýndaki IEntity ýnterfaceinin zorunluluðunu koþarak anlayabilcek
+..bunun gibi durumlarýn tamamýný core a tanýmladýk..uygulamanýn domain kýsmý uygulamnýn çekirdeði
+
+Ientityrepository ve EFentityRepositoryBAse i core a tanýmladýk. neden dataaccess tarafýnda tanýmlamadýk? baþka veritabanlarý kullnýrsak diye.. ayrýca farklý durumlarýda var. ben mesela
+þunuda yapabilirdim dataaccess katmanýnda IEntityrepository i ve EntityRepositoryBase ide tanýmlayabilirdim.. fakat sadece dataaccess i kalýtým yapanlar onu kullanabilirdi..
+web API tarafý olabilir, WCF olabilir, vs bunlarýn tamamýnýn ihtiyacý olacaðýný düþünerek core a koydum..mesela Ientityrepository bu sýnýf entityframework ü kullanacaðýna dair herhangi ibr 
+bildirimde bulunmuyo entityframework e herhangi bir baðýmlýlýðý yok..btün dataccesss katmanlarý kullanabilir bunu böylece.
+EFentityRepositoryBAse bu enetityframerok için repository lerin ana sýnýfýný temsil ediyor..core a koyduk çünkü bugün benim kullanmýþ olduðum dataaccess katmanýmdaki diðer ýnterface lerde
+IEntityRepository i implement ediyor ve burdaki ICategory dal ý ortaya koydum. bu da EFCategoryDAl için bir sözleþme niteliði taþýyor.. artýk þu olucak.. business layer sadece ICategoryDal 
+ýsticek ve ICategoryDal ý bilicek. EFCategoryDal sýnýfýyla ilgili hiçbir bilgisi olmýcak.. busayede ben dataaccess altýndaki enetityframewrok deðil baþka bir teknolojýyide kullanýor olsam
+business bundan etkilenmicek.. çünkü o ICategoryDal ile çalýþýyor..böylelikle business katmaný sadece IEntityRepository altýnda yazan operasyonlarý ve eðer varsa IcategoryDal içerisinde
+yazan operasyonlarý tanýcak.. baþka hiçbir operasyonu tanýmýcak..
+
+bütün katmanlar birbiriyle iletiþime geçerken Interface ler üzerinden iletiþime geçiyor böylelikle katmana baðlýlýk ortadan kalkmýþ oluyor..
+
+her katman için test projeleri yazarýz.. bu þekilde geliþtireceðiniz katmanlý yapýlarda yada büyük projelerde veriyi getiriyim de bir görüyümü yoktur
+sen veri gelsinde görüyüme gidinceye kadar geliþtirdiðimiz her katman için bir de test projesi yazarýz.. unýt testler vs test drived development nasýl yapýlýyor gibi
+her bir katmaný görsel arayüzü daha kodlamadan tek tek test edebilirsiniz.. mock nesneler falan oluþturmayý gerektiririz bazý durumlarda
+
+görsel katman gösteriyor
+iþ katmaný kurallarý uyguluyor
+ver katmaný veriye eriþiyor
+entityde varlýklar
+
+
+business tarafýnda direk entityframework kodlarýný yazmamak lazým. kesinlikle ama kesinlikle biz business layer da veritabýyla ilgili hiçbir satýr kod yazmayýz. yazmamamýz gerekir
+prensiplere aykýrý. .diðer yandan baðýmlý oluyosunuz. siz business katmaný altýnda veri eriþim katmanýna ait kod kullanýrsanýz komple orya baðýmlý kalýyosunuz.. nasýl yöntem izleriz
+bu olmasýn diye biz dataaccess katmanýna ýnterface lerimizi yazdýk..þimdi geliþtireceðimiz busness layerda da sadece bu ýnterface leri kullancaz.. business katmanýnýda görsel katmaný için
+bir çýkýþ noktasý olmasý lazým.. abstract. gerçek nesnelerimizi barýndýrmak için de concrete oluþturuyoruz.. ben neyi servis ederim. category leri servis ederim. bu ne demek ? 
+servis etmek ne demek? ICategoryService burada business katmaný kullancak hangi katmansa bu web apý,WCF ,MVC olabilir farketmez.. onlara sunmak istediðiim neyse onu belirtmek istiyorum
+
+IProductService: bir product servisinin içerisinde neleri servis etmek istersem bunlardan bahsedicem.. mesela ben bütün product larýn listelenmesini isterim. bir product eklemek,
+güncellemek,silmek yada bir product ý Id sine göre getirmek isteyebilirim..biz niye bir daha bunu yapýyoruz.. zaten bunu yapan bizim daha önce yaptýðýmýz
+data katmanýnda dal larýmýz vardý.. burada neden bir daha yazalým.. direk repository i kullansak olur mu? OLMAZ.. bu repository i kullanan bir katman olmalý,  ve repository nin üzerine
+özelleþtirilmiþ bir takým operasyonlarýda yürütebilmeli..mesela belli bir kategorinin altýndaki ürünleride isteyebilirim.. bu nihayetinde data katmanýnda olmayan bir özellik.. burada bu
+operasyonu yürütebilmeliyim.. yani direk data katmanýyla baðýmlýlýðý koparmýþ olmalýyým.. asýl amaçlarýmdan biriside buydu
+
+CategoryManager: tüm kategori iþlemlerini yönetecek olan iþ katmaný sýnýfým

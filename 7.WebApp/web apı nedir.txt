@@ -1,0 +1,41 @@
+bir mvc projesinin görsel katmaný yani view klasörünün hiç olmadýðýný düþünün ve siz verilerinizi istemcilere görsellikle
+deðilde saf veri olarak gönderiyosunuz.. gönderirken temel olarak 2 formatla gönderebilirsiniz
+1.json
+2.xml formatý
+eskiden xml web servisleri vs vardý artýk web apý ler daha yaygýn kullanýlýyor.güvenlik,hafif dosya eriþimi,routing 
+mekanizmasý gibi daha birçok avantajý var
+ne zamsn kullanýrým ?
+webde barýndýrdýðým database den verilerimi alýp bütün bayilerime ulaþtýrmak isteyebilirim ve bayilerim bir windows uygulamasý
+kullanýyolardýr..bu windows sayesinde bana stoklarýmý görüp sipariþ geçebilmeliler..tabiki ben bu windows uygulamasýnda direk
+olarak bayimi baðlarsam güvenlik sorunlarý çýkacaktýr
+
+mesela;
+web de bulunan database m var ve bayilerimde bulunan windows uygulamam var.bayimin görmesini istediðim tek þey stoklarým ve
+yazmasýný istediðim tek þey sipariþler..ama cnn string le baðlantý yaparsam güvenlik açýðý olur
+				ben bayime ham verilerimi açmak istemem.. ihtiyacý old verileri açmak isterim
+				bayilerdeki win app güncellendiðinde de sýkýntýlý bir durum
+				public web app E_Commence.. son kullanýcýlarýn bu site üzerinden de bana ürünlerimi görüp
+sipariþler geçmesini istiyorum
+				mobil app eklediðini düþün.. IOS appler için app store a koymanýz lazým. androd için google
+play a koymanýz gerekiyor, windows app
+araya bir katman koyup tamamýyla database ile diðer uygulamalarým arasýndaki baðlantýyý izole etmeliyim..yetkili olduðu
+API deki metodlara eriþebilsinler.. ben bir iþ kuralý yazýcaksam eðer web apý tarafýnda yapýyoum bunu..database baðlantýsý 
+yapýcaksam web apý de yapýyorum..
+web servislerle web apý arasýndaki fark?
+web servisler oldukça eski bir teknolojidir..güvenlik ileri seviyede saðlanablir. verilerin iletiþimi noktasýna geldiðiniz 
+zama bir web servis sadece xml formatýnda veri gönderir ve sadece xml formatýnda veri alýr
+web apý lerde durumçok farklýdýr..güvenlik daha güçlüyken ben bir string içerik , resimde gönderebilirm, json formatý
+gibi istediðim her t,rlü içeriðin alýþveriþini yapabiliyorum .. json dosyasý çok daha küçük. düþük band geereksinimleriyle
+yani ayný içeriðe sahip xml dosyasý ile json dosyasý boyutu arasýnda fark var.. iletiþim daha hýzlý daha az bandwith kullan
+mýþ olursunuz.. tüm uygulamalara web apý kullanmak çok daha avantajlý
+mvc uygulamasýndan pek farký yok sadece görsel katman yok
+
+biz uygulamamýz üzerinden POCO nesneleriyle çalýþýrýz fakat web üzerinden bir class ý gönderemezsiniz yada classýn bir 
+örneðini direk web üzerinden göndremezsiniz.. o classýn örneðini(product p = new product) göndermek için farklý bir 
+formata dönüþtürülür. bu iþleme serialize denir. dönüþtürdüðümüz format genel olarak xml yada json dýr..
+örneðin istemci yeni bir product eklemek istiyo database bunu yapmak içinde web apý ile haberleþmesi lazým.. yada yeni bir
+sipariþ göndercek.istemci tarafýnda sipraiþ olarak oluþturduðunuz nesnemiz bize http request üzerinden gelirkende ya json
+ya xml formatýnda yada bir form olarak geliecek controller ým bunu deserialize edip bir POCO nesnesine dönüþtürcek model
+bindingla ayný mvc web formlarda da olduðu gibi arada bir fark yok.database ine götürüp yazýcak entity frameworkü kullanarak
+
+

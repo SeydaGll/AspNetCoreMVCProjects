@@ -1,0 +1,35 @@
+asp.net core ile gelen Identity yapýsýný nasýl uygulayacaðýmýzý tartýþýcaz. net core geliþtiricileri frmaework e dahil
+etmiþ olduðý Identity yapýsý
+
+Custom ýdentity yani üyelik altyapýsýnda neler olmasý grekiyor
+eskiden bunun için membership altyapýsý vardý. kompleksti.çok daha fazla veriyle çalýþýlabiliyodu
+Identity sayesinde facebook ile baðlan gibi bir yapý yapabiliyosun
+Identity ile kullancýlarýn kayýt,2 adýmda doðrulama,sms gmail gönderimleri,email aktivasyonlarý,facebook google gibi 3.
+parti kimlik doðrulama servilserinin kullanýmý hepsi gayet basit ve kolay uygulanabilecek hale indirgenmiþ durumda framework
+içerisinde..
+
+web apý geliþtiriyorum,asp.net ýdentity kullanabilir miyim? 
+kullanýrsýn ama identity kullanýyor olman çokta mantýklý deðil çünkü o mvc icin yada web siteleri için geliþtirilmiþ bir yapý..
+web apý leri bir win app den yada mobil appden tüketiriz..onun yerine ovin altyapýsýný kullanan farklý bir kimlik doðrulama sistemi 
+geliþtirilmesi daha doðru
+
+asp.net ýdentity kullanmak için en gibi gereksinimlerim var? 
+veritabanýna ihtiyacýnýz var..ýdentity veritabaný tarafýnda entityframework le çalýþabilicekte..code first le çalýþýyor.. 
+veri tabanýný otomatik kendi tablolarýný generate edip bu tablolarýn içerisine kullanýcýlarý ve diðer verilerin hepsini saklayabiliyor
+
+bu tablolar özelleþtirilebiliyor mu? evet. ek sütunlar oluþturabilirsiniz.. mesela kullanýcýnýn adý soyadý tel numarasý 
+alýnýyor ama benim tc ye de ihtiyacým var.. onu da eklesem olur mu? evet olur.. çok basit þekilde bunu yapabliyosnuz
+
+no authentication: herhangi bir kimlik doðrulama iþlemi yapýlmýyor
+
+Individual User Acoounts:(bireysel kullanýcý hesaplarý) kullanýcýlarýn kendi bireysel hesaplarýný oluþturabilceði yada 
+twitter facebook microsoft gibi farklý kimlik doðrulama saðlayýcýlarýný kullanarak sizin sitenize de oturum açabilmenizi,
+kayýt olabilmesini saðlayan,arka tarafta sql server database ini kullanan bir yapýyý inþa ediyor
+
+Work or School Accounts: uygulamanýzý isterseniz active directory , microsoft azure active directory ve office 365 dahil
+olmak üzere cloud tarafýnda  authentication yapmak istiyosanýz 
+
+windows authentication: kurum için kullanýlan 
+
+biz Individual User Acoounts ile internete açýk olan web sitemize isteyen herkesin kayýt olabileceði yada facebook twitter gibi 3.parti
+provider lardaki hesaplarlada oturum açýp bizim sitemizede kayýtlarýný býrakabilecekleri bir yapý incelicez  

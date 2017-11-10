@@ -1,0 +1,16 @@
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\bin\Debug\netcoreapp1.1\CdrFramework.Core.deps.json
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\bin\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.csproj.CoreCompileInputs.cache
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.AssemblyInfo.cs
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\bin\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\Projects\ASP.NET CORE MVC\11.2509\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\bin\Debug\netcoreapp1.1\CdrFramework.Core.deps.json
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\bin\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\bin\Debug\netcoreapp1.1\CdrFramework.Core.pdb
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.csprojResolveAssemblyReference.cache
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.csproj.CoreCompileInputs.cache
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.AssemblyInfo.cs
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.dll
+D:\VisualStudio\ASP.NET CORE MVC 5 Uygulamaları\11.ECommerceSite\CdrFramework\CdrFramework.Core\obj\Debug\netcoreapp1.1\CdrFramework.Core.pdb

@@ -1,0 +1,1 @@
+veritabanındaki tabloların içerisinde identity kendi ihtiyacı olan bütün verileri tutabiliyo

@@ -1,0 +1,7 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\bin\Debug\netcoreapp1.1\WorkingWithEF.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\bin\Debug\netcoreapp1.1\WorkingWithEF.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\bin\Debug\netcoreapp1.1\WorkingWithEF.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\bin\Debug\netcoreapp1.1\WorkingWithEF.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\obj\Debug\netcoreapp1.1\WorkingWithEF.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\obj\Debug\netcoreapp1.1\WorkingWithEF.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\11.08\WorkingWithEF\WorkingWithEF\obj\Debug\netcoreapp1.1\WorkingWithEF.AssemblyInfo.cs

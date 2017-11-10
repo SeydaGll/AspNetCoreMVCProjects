@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.Partial("_DuyuruPartial", new List<string> { "Duyuru1", "Duyuru2", "Duyuru3" })
+        <h1>@ViewData["Baslik"]</h1>
+        @await Component.InvokeAsync("Slider")
+        <h2>@(ViewBag.Olmayan==null?"veri yok":"veri var")</h2>
+        
+    </div>
+    
+</div>

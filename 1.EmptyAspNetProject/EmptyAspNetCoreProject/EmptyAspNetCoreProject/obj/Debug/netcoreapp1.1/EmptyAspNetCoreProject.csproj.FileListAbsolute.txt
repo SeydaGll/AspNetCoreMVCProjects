@@ -1,0 +1,10 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\bin\Debug\netcoreapp1.1\EmptyAspNetCoreProject.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\bin\Debug\netcoreapp1.1\EmptyAspNetCoreProject.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\bin\Debug\netcoreapp1.1\EmptyAspNetCoreProject.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\bin\Debug\netcoreapp1.1\EmptyAspNetCoreProject.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\bin\Debug\netcoreapp1.1\EmptyAspNetCoreProject.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\obj\Debug\netcoreapp1.1\EmptyAspNetCoreProject.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\obj\Debug\netcoreapp1.1\EmptyAspNetCoreProject.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\obj\Debug\netcoreapp1.1\EmptyAspNetCoreProject.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\obj\Debug\netcoreapp1.1\EmptyAspNetCoreProject.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\0708\EmptyAspNetCoreProject\EmptyAspNetCoreProject\obj\Debug\netcoreapp1.1\EmptyAspNetCoreProject.pdb

@@ -1,0 +1,10 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\bin\Debug\netcoreapp1.1\RazorSyntax.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\bin\Debug\netcoreapp1.1\RazorSyntax.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\bin\Debug\netcoreapp1.1\RazorSyntax.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\bin\Debug\netcoreapp1.1\RazorSyntax.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\bin\Debug\netcoreapp1.1\RazorSyntax.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\obj\Debug\netcoreapp1.1\RazorSyntax.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\obj\Debug\netcoreapp1.1\RazorSyntax.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\obj\Debug\netcoreapp1.1\RazorSyntax.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\obj\Debug\netcoreapp1.1\RazorSyntax.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\1408\RazorSyntax\RazorSyntax\obj\Debug\netcoreapp1.1\RazorSyntax.pdb

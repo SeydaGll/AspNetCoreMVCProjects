@@ -1,0 +1,7 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\bin\Debug\netcoreapp1.1\AddIdentityService.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\bin\Debug\netcoreapp1.1\AddIdentityService.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\bin\Debug\netcoreapp1.1\AddIdentityService.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\bin\Debug\netcoreapp1.1\AddIdentityService.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\obj\Debug\netcoreapp1.1\AddIdentityService.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\obj\Debug\netcoreapp1.1\AddIdentityService.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\8.1509\AddIdentityService\AddIdentityService\obj\Debug\netcoreapp1.1\AddIdentityService.AssemblyInfo.cs

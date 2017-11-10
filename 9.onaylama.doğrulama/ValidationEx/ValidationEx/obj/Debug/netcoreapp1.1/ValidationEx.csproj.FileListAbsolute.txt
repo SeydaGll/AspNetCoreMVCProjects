@@ -1,0 +1,10 @@
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\bin\Debug\netcoreapp1.1\ValidationEx.deps.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\bin\Debug\netcoreapp1.1\ValidationEx.runtimeconfig.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\bin\Debug\netcoreapp1.1\ValidationEx.runtimeconfig.dev.json
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\bin\Debug\netcoreapp1.1\ValidationEx.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\obj\Debug\netcoreapp1.1\ValidationEx.csprojResolveAssemblyReference.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\obj\Debug\netcoreapp1.1\ValidationEx.csproj.CoreCompileInputs.cache
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\obj\Debug\netcoreapp1.1\ValidationEx.AssemblyInfo.cs
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\bin\Debug\netcoreapp1.1\ValidationEx.pdb
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\obj\Debug\netcoreapp1.1\ValidationEx.dll
+C:\Users\DragonGTX1050\Documents\Visual Studio 2017\Projects\ASP.NET CORE MVC\9.1809.onaylama.doğrulama\ValidationEx\ValidationEx\obj\Debug\netcoreapp1.1\ValidationEx.pdb

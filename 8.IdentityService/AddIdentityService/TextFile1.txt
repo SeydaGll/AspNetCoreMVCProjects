@@ -1,0 +1,69 @@
+1. bir takým ihtiyaçlarýmýz var onlarý Dependency içerisine nuget package manage den yükkleyelim.
+	Microsoft.AspNetCore.Authentication.cookies
+		Microsoft.AspNetCore.MVC
+			Microsoft.AspNetCore.Identity.entity
+				microsoft.EntityFramework.core.SqlServer
+					microsoft.EntityFramework.core.SqlServer   --> baðýmlýlklar yüklendi
+
+2.program.cs den applicationinsight ý kaldýr
+
+3.DataContext sýnýfý yaz.. bunu hazýr et . bunun gerekliliklerine geçmeden önce 
+
+4.model sýnýflarýný yaz. kendi User classým . bunun IdentityUser olmasý için kalýtýmýný yap. 
+	ihtiyacýn varsa eðer bu kullanýcý için özel property lerde tanýmlayabilirm
+
+5.MyIdentityRole kendi IdentityRole sýnýfýmýda kendim oluþturmak istiyorum. normalde bu yoktu ama biz yazalým. Role un açýklamasýný olduðu bir property yaz
+
+6.Datacontext i yapýlandýr. bu sýnýfý bir entityframeworkcore datacontexti haline getirmek istersem dbcontext sýnýfýndan kalýtým yaparým fakat burada ben Identity iþlemleri üzerine kullanmak
+istediðim için IdentityDbContext sýnýfýndan kalýtým yaparým. bu generic bir sýnýfdýr
+
+7. constractýrýný yaz. base i tanýmla optionsý tanýmla
+
+8. þimdi startup daki konfigürasyonlarýný yap
+	yapýlmasý gereken belli baþlý iþlemler var:
+		connection stringin okunmasý
+		dbcontext in servise eklenmesi
+		Identity nin servisime eklenmesi
+
+9.connection stringi ben entityframework te nasýl okuyup getiririm? normalde nerededir benim connectin string im? aslýnda ConfigureServices() kýsmýna kendimde yazabileceðim gibi
+bir tane json uzantýlý dosymýz vardý.. UYGULAMANIN AYARLARINI ÝÇERÝSÝNE YAZDIÐIM JSON DOSYASI..root dizininde duruyodu.. app.settings.json..uygulama ayarlarý.. bunu ekle
+içerisine connection stringi yaz..
+
+10. string deðerini oku. bunu okuyabilmek için özel nesnem vardý onu oluþtur
+	IConfigurationRoot
+	bunun buradaki propery deðerni ctr içerisinde set ediceksin çünkü startup sýnýfý ilk defa açýldýðýnda benim için configuratýon gelsin istiyorum
+	projemin base path ini vermem lazým ki gidip Configuration dosyasýný bulsun yani appsetting si bulabileceði root dizin neresi onu söylemem lazým. bunu SetBasePath isimli sýnýf yapar
+	sunucuda benim uygulamam nerede duruyor bunu öðrenmem lazým.. bunu öðrenebilmem için IHostingEnviroment isminde bir tane abstraction ým varyani bir interface sayesinde bana bu ilgili
+	deðerleri vericek olan sýnýf Dependency Injection ile gönderiliyor bana
+	hangi json dosyasýný okumasýný istiyosam onu söylicem
+	reloadonchange o dosya üzerinde deðiþiklik olursa ben configurasyonu tekrardan yükleyeyim mi? evett
+
+11.property e bunu set et
+
+12.datacontext imi katmanýmý bir framewrok servsi olarak eklemem lazým. ekledikten sonra entityframework ü rahatalýkla kullanabilirsin her yerden
+
+13.Idendity service i ekle.. eklenme sýrasý öenmli
+
+14.servise MVC yi ekle . mvc uygulamasý geliþtiriyorum çübkü
+
+15.uygulamam çalýþtýðý zaman Identity y kullansýn istiyorum.Identity serbisini kullanmasý için
+
+16. mvc yi kullanmasý için . mvc yi varsayýlan root ile kullan de ve iþi bitir.  root.rootmap.name yazmak yerine
+
+17. startup tarafý bitti.
+
+18. view modellerini yaz. controller ve viewler arasýnda veri taþýmak için view modeller kullanýrýz. bildiðin POCo class lardýr.. ama içerisinde yazdýðýnýz propery ler direk olarak veri 
+tabanýna gitmezde veritabanýndan gelen bir sýnýf üstündeki deðerleri kendi üstüne alýp view e gönderirler.. view model geliþtir.
+	RegisterViewModel : kayýt sayfasý yapýcaz bir tane.. oradan girilcek formun verilerini taþýyacak olan sýnýfým bu
+
+19.LoginViewModel yap : Login olucak kullanýcýlarýn verilerini controlle a taþýyacak olan sýnýf
+
+20.AccountController oluþtur. ctr sýný oluþtur.. dependency injection için.. bu sýnýf içerisinde kullanýcýlaýn oluþturulmasý vs gibi bir sürü iþlemini yapmam lazým. bu iþleri yapabilmem
+içinde Identity nin kendine ait sýnýflarý var..mesela oturum açmak istiyosan SignÝnManager sýnýfý, role atamam istiyosan Rolemanager .. bunlarý dependency injection ile al
+
+21.bunun içerisinde kullanýcýný kayýt olmasý için Register isimli metoda ihtyiiacýmýz var. içerisinde bir tane HttpGet HttpPost olucak iki tane login ACTÝon ýmýz olucak
+birisi get birisi post logout için direk post olsa yteer toplamda 5 tane action yaz.
+
+22.login yap
+
+23.client side gereksinimleri almam lazým.. client side tarafýnda validasyon yapmaK için 

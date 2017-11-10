@@ -1,0 +1,48 @@
+ürünler listelendi..
+þimdi sýra kategorilerimizi getirmekte..ürünlerimiz sayfalanýcak , 10 ar 10 ar listelenmesini saðlýcaz. belli bir katetgorinin altýndaki ürünlerinde sayfalanýyor olmasýný saðlýcaz.
+sepet eklicez.. sepeti session mimarisi üzerine inþa edicez.. güvenlik tarafý yani identity tarafý eklencek. admin panel eklencek.. 
+admin panelinde iki þeye dikkat ediceksiniz.. 1. admin yetkisi olamayan giremesin yani identity i uyguladýktan sonra controller ýn üstüne sadece atorization ý ekliceksiniz admin diceksiniz
+buraya girebilecek olana ve bitecek.. bunun haricinde de orada bir ürünün eklenmesi  yada bir ürünün düzeltilmesi,bildiðiniz mvc uygulamasý
+
+admin in view lerini baþka bir klasörde depolamak yerine asp.net mvc de area dediðimiz bir yapý var. bir web sitesinin içinde sanki ikinci bir web sitesiymiþ gibi çalýþabiliyor.
+burada area oluþturup area nýn içerisine bir admin için controller lar admin için view ler hatta farklý bir layout gibi çalýþabiliyosun. gayet basit bir yapý
+
+areas adýnda klasör oluþturuyorum.. bu klasörün altýna Admin adýnda klasör oluþturuyorum.. bu klasörün içrisine admin için controller lar view ler hatta admine özel  varsa view modeller 
+ekliyorum.ben projeyi pubish ettiðimde bu klasörün içindeki nesnelerde yine ayný þekilde wwwroot ýn içerisine  dll olarak geçmiþ oluyor..controller aayný þekilde çalýþýyor..route tanýmý
+yapman lazým.. onuda startup a yazmak zorunda deðilsin. direk areas ýn üzerine de yazabilirsin..attrýbute routing ile..
+
+admin panel için doküman : https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/areas
+
+product contoller da bütün servisleri alýp view ýmýze gönderdik..sayfalama yapmak istiyorsak model býndýng den yararlanmalýyýz.. model býndýng, actýon ýmýz çaðýrýlýrken  içerisine
+model göndermektir..bu model query string den yani adres satýrýndan gönderilebileceði gibi form body den de gönderilebiliyordu!
+skip() metodu-->bir veriyi çekerken belli bir sayýda satýrýn atlanarak alýnmasý.. mesela 2. sayfayý isticeksem eðer ekranda databasedeki ilk 10 satýrýn atlanýp sonraki 10 satýrýn alýnmasý
+lazým..skip iþlemi ilk 10 satýrý atlayabilmemi saðlýcak.. peki kaç satýr atlýcamý nasýl hesaplýcam? matematik
+
+http://localhost:50812/?page=2 ? iþareti query string in baþlangýný söyler..query string deki deðiþkenimin adý page.. bunun deðrini vermem lazým ki buraya gelip okusun
+
+Categorileri getirelim..bana ne lazým.. hangi kategorinin altnýdaki ürünleri istiyorum bunu bilmem lazým.. hangi kategorinin olduðu nerden gelicek?
+
+pager yapýcazz..sayfalama iþi için biraz görsel taraf yapalým yani pager yazalým.. bu pager ý zaten bir þekilde altýna yazarým ama bunu çok data efektif kullanabilmek için bir yöntem kulla
+nýcam.. br taghelper yazýcaz.. pager taghelper olucak
+
+session mimarisi üzerinde sepet iþlemlerini nasýl yürütürüz?
+bizim web uygulamalarýmýz state less dir.. yani durum yönetimi tarafýnda birazcýk zayýftýrlar.. istek gelir ama istek kimden gelmiþ bilemezsinz..bu iþlemleri biraz olsun daha yönetilmemiz
+için yani isteðin gelen istemciye özel bir takým vlerileri saklamak vs gibi durumlar için session yapýlarý kullanýyoruz.. database de yada sunucuda memory de saklanabilen deðiþken diye
+biliriz.. ve bu deðiþken bana request gönderen her istemci için özel olarak oluþturulabiliyor.. içerisinde istediðim deðerleri saklayabiliyorum fakat as.net core tarafýnda
+session mimarisi birazcýk deðiþtirildi
+
+kullanýcýnýn kart iþlemlerini yönetebilecek business tarafýnda bir yapý kurmam lazým.. çünkü kart iþlemleri yönetimi sadece MVC yi ilgilendiren bir durum deðil bu bir iþ kuralý
+
+yazdýðýmýz servisin operasyonlarýný yönetebilecek Cart servise ihtiyacýmýz var
+CartService i nerde kullanýcaz?  bizim vir servise ihtiyacýmýz var.. bu servis tarafýný ayaklandýrmamýz lazým. ve kendimiz Custom bir servis daha yazýcaz
+bu servisi yazarkende MVC tarafýnda yazýcaz.. session servisi yazýcaz bir tane ve yazacak olduðumuz session servisi sadece web uygulamalarýnda kullanýlabilir.. diðer katmanlara koymuyor olmam
+ýn sebebi o.. çünkü session web e uygun bir yapý..
+session içerisinde sadece int ve string tutuyordu.. ama ben class da tutmasný istiyorum.. bu session içerisine bir metodda ben yazarým..asp.net core alt yapýsýnda bulunan session nesnesinin
+içerisine.. içerisine bir object veri gönderebileceðim bir metod yazýcam..bizim geniþletme yani extension metodlarýmýz vardý.. þimdi br extension metod yazýcaz..
+
+web tarafýnda kullanacaðým bir servise daha ihtiyacom olucak. bu MVC ye baðlý sadece MVC ye özgü servis olucak
+
+view component yazalým.. kullanýcýnýn session ýndaki o cartýný okuyup gösterme iþlemlerini yapsýn
+kartýn view componenti olucak.. bunun içerisinde gözükmesini istediðim ne varsa onu viewmodel haline getirmeliyim..model yazalým
+
+Go to Detail kýsmýna gidip ürün kaldýrmak için view yazýcaz listelemek için birde CartController ýn içerisinde Remove tarafýný yazýcaz.. 

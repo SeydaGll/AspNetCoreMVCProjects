@@ -1,0 +1,24 @@
+﻿@model Product
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Add Product</h1>
+        @*<form action="/" method="post"></form>  böyle oluşturmuyorum. çünkü action e gidipte ben git create dersem create ın url değiştiği zaman sorun çıkar*@
+        <form asp-controller="Product" asp-action="create"   method="post" > 
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <label asp-for="ProductId"></label> : <input asp-for="ProductId" />&nbsp;<span asp-validation-for="ProductId" class="text-danger"></span><br />
+            <label asp-for="Name"></label> : <input asp-for="Name" />&nbsp;<span asp-validation-for="Name" class="text-danger"></span><br />
+            <label asp-for="IsInStock"></label> : <input asp-for="IsInStock"/><br/>
+
+            <input type="submit" value="Create" />
+
+
+
+
+        </form>
+</div>
+</div>
+@section Scripts{
+@Html.Partial("_ValidationScriptsPartial")
+}
